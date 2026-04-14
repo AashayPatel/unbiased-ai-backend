@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pandas
+fairlearn
+google-genai
+google-cloud-bigquery
+db-dtypes
+gunicorn
