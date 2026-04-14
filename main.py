@@ -73,7 +73,7 @@ def explain_bias():
         )
         # FIXED: Use 'client' instead of 'genai_client'
         response = client.models.generate_content(
-            model="gemini-1.5-flash",
+            model="gemini-2.5-flash",
             contents=prompt
         )
         return {"audit": audit_data, "ai_explanation": response.text}
@@ -86,19 +86,19 @@ def list_available_models():
         return {"error": "Gemini API key not configured"}
     
     try:
-        # Calls the API to list all models
+        # In the 2026 SDK, client.models.list() returns a Pager of Model objects
         models = client.models.list()
         
         model_list = []
         for m in models:
-            # We filter for models that support 'generateContent'
-            if "generateContent" in m.supported_generation_methods:
-                model_list.append({
-                    "name": m.name,
-                    "display_name": m.display_name,
-                    "description": m.description
-                })
+            # We just grab the name and display name 
+            # (Filtering for supported methods is different in the new SDK)
+            model_list.append({
+                "name": m.name,
+                "display_name": getattr(m, 'display_name', 'N/A'),
+                "description": getattr(m, 'description', 'N/A')
+            })
         
         return {"available_models": model_list}
     except Exception as e:
-        return {"error": str(e)}
+        return {"error": f"Failed to list models: {str(e)}"}
