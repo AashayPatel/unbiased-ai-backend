@@ -1,0 +1,86 @@
+2026-04-20 15:45:41.164 [warning] Dir "/home/nekofell908/.pixi/envs" is not watchable (directory does not exist)
+2026-04-20 15:45:43.929 [info] Skipping ActivatedEnv Detection:  process.env.VSCODE_CLI !== '1'
+2026-04-20 15:45:43.935 [info] Python interpreter path: /bin/python
+2026-04-20 15:45:52.687 [info] > pyenv which python
+2026-04-20 15:45:52.687 [info] cwd: .
+2026-04-20 15:45:56.903 [info] Starting Jedi language server for nekofell908.
+2026-04-20 16:10:33.092 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 16:50:28.834 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 17:24:44.383 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 17:32:00.767 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 17:32:05.151 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 17:32:13.954 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 17:32:17.336 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 18:20:01.960 [info] Running installed packages checker:  {
+  id: '/bin/python',
+  sysPrefix: '/usr',
+  envType: 'Global',
+  envName: '',
+  envPath: '/',
+  path: '/bin/python',
+  architecture: 3,
+  sysVersion: '3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]',
+  version: {
+    raw: '3.12.3',
+    major: 3,
+    minor: 12,
+    patch: 3,
+    build: [],
+    prerelease: [ 'final', '0' ]
+  },
+  displayName: 'Python 3.12.3 64-bit',
+  detailedDisplayName: 'Python 3.12.3 64-bit',
+  type: undefined
+} /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py /home/nekofell908/requirements.txt
+2026-04-20 18:20:01.960 [info] > /bin/python /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py ./requirements.txt
+2026-04-20 18:20:10.316 [info] Running installed packages checker:  {
+  id: '/bin/python',
+  sysPrefix: '/usr',
+  envType: 'Global',
+  envName: '',
+  envPath: '/',
+  path: '/bin/python',
+  architecture: 3,
+  sysVersion: '3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]',
+  version: {
+    raw: '3.12.3',
+    major: 3,
+    minor: 12,
+    patch: 3,
+    build: [],
+    prerelease: [ 'final', '0' ]
+  },
+  displayName: 'Python 3.12.3 64-bit',
+  detailedDisplayName: 'Python 3.12.3 64-bit',
+  type: undefined
+} /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py /home/nekofell908/requirements.txt
+2026-04-20 18:20:10.316 [info] > /bin/python /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py ./requirements.txt
+2026-04-20 18:21:00.168 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 18:23:16.500 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 18:23:18.730 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 18:23:28.582 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 18:23:36.376 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 18:45:55.574 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 18:46:00.757 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 18:46:41.691 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 18:46:45.806 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 18:46:53.045 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 19:03:13.675 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 19:04:12.522 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 19:04:21.232 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 19:04:55.049 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 19:24:31.839 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 19:24:39.826 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 19:24:41.285 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 19:38:03.109 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 19:38:47.348 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 19:38:50.500 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 20:08:05.589 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 20:17:26.670 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 20:47:32.506 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 21:11:57.277 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 21:12:13.855 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 21:12:28.375 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 21:12:38.141 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 21:12:41.540 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-20 21:14:09.032 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py

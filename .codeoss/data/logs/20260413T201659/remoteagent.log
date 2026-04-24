@@ -1,0 +1,24 @@
+2026-04-13 20:16:59.700 [info] 
+
+
+
+
+2026-04-13 20:16:59.729 [info] Extension host agent started.
+2026-04-13 20:16:59.771 [info] Started initializing default profile extensions in extensions installation folder. file:///home/nekofell908/.codeoss/extensions
+2026-04-13 20:16:59.807 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/nekofell908/.codeoss/extensions
+2026-04-13 20:17:05.288 [info] [127.0.0.1][fdfb0e69][ManagementConnection] New connection established.
+2026-04-13 20:17:05.436 [info] [127.0.0.1][18c6734f][ExtensionHostConnection] New connection established.
+2026-04-13 20:17:08.079 [info] [127.0.0.1][18c6734f][ExtensionHostConnection] <1466> Launched Extension Host Process.
+2026-04-13 20:17:08.927 [info] [127.0.0.1][18c6734f][ExtensionHostConnection] <1466> [reconnection-grace-time] Extension host: read VSCODE_RECONNECTION_GRACE_TIME=10800000ms (10800s)
+
+2026-04-13 20:20:27.394 [info] [127.0.0.1][fdfb0e69][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2026-04-13 20:20:27.624 [info] [127.0.0.1][18c6734f][ExtensionHostConnection] <1466> Extension Host Process exited with code: 0, signal: null.
+2026-04-13 20:20:39.451 [info] [127.0.0.1][787cbfb4][ExtensionHostConnection] New connection established.
+2026-04-13 20:20:39.455 [info] [127.0.0.1][787cbfb4][ExtensionHostConnection] <2010> Launched Extension Host Process.
+2026-04-13 20:20:39.606 [info] [127.0.0.1][a9854356][ManagementConnection] New connection established.
+2026-04-13 20:20:39.886 [info] [127.0.0.1][787cbfb4][ExtensionHostConnection] <2010> [reconnection-grace-time] Extension host: read VSCODE_RECONNECTION_GRACE_TIME=10800000ms (10800s)
+
+2026-04-13 22:07:00.833 [info] [127.0.0.1][787cbfb4][ExtensionHostConnection] The client has reconnected.
+2026-04-13 22:07:00.838 [info] [127.0.0.1][a9854356][ManagementConnection] The client has reconnected.
+2026-04-13 22:28:39.540 [info] [127.0.0.1][a9854356][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2026-04-13 22:28:40.122 [info] [127.0.0.1][787cbfb4][ExtensionHostConnection] <2010> Extension Host Process exited with code: 0, signal: null.

@@ -1,0 +1,9 @@
+2026-04-14 10:18:26.083 [warning] Dir "/home/nekofell908/.pixi/envs" is not watchable (directory does not exist)
+2026-04-14 10:18:28.724 [info] Skipping ActivatedEnv Detection:  process.env.VSCODE_CLI !== '1'
+2026-04-14 10:18:33.887 [info] Python interpreter path: /bin/python
+2026-04-14 10:18:35.323 [info] > pyenv which python
+2026-04-14 10:18:35.323 [info] cwd: .
+2026-04-14 10:18:40.811 [info] Starting Jedi language server for nekofell908.
+2026-04-14 11:44:31.804 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-14 11:55:24.344 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-14 12:06:54.659 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py

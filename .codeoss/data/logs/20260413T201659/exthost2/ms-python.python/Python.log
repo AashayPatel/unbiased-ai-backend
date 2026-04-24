@@ -1,0 +1,71 @@
+2026-04-13 20:26:30.504 [warning] Dir "/home/nekofell908/.pixi/envs" is not watchable (directory does not exist)
+2026-04-13 20:26:31.134 [info] Starting Environment refresh
+2026-04-13 20:26:31.135 [info] Searching for interpreters in posix paths locator
+2026-04-13 20:26:31.147 [info] Searching for pyenv environments
+2026-04-13 20:26:31.147 [info] Searching for conda environments
+2026-04-13 20:26:31.147 [info] Searching for global virtual environments
+2026-04-13 20:26:31.147 [info] Searching for custom virtual environments
+2026-04-13 20:26:31.154 [info] Skipping ActivatedEnv Detection:  process.env.VSCODE_CLI !== '1'
+2026-04-13 20:26:31.154 [info] Skipping ActivatedEnv Detection:  process.env.VSCODE_CLI !== '1'
+2026-04-13 20:26:31.158 [info] pyenv is not installed
+2026-04-13 20:26:31.159 [info] Finished searching for pyenv environments: 22 milliseconds
+2026-04-13 20:26:31.159 [info] Finished searching for custom virtual envs: 21 milliseconds
+2026-04-13 20:26:31.171 [info] > conda info --json
+2026-04-13 20:26:31.186 [info] > hatch env show --json
+2026-04-13 20:26:31.186 [info] cwd: .
+2026-04-13 20:26:31.201 [info] > pyenv which python
+2026-04-13 20:26:31.201 [info] cwd: .
+2026-04-13 20:26:31.202 [info] Finished searching for global virtual envs: 64 milliseconds
+2026-04-13 20:26:31.222 [info] Found: /bin/python --> /bin/python3.12
+2026-04-13 20:26:31.223 [info] Found: /bin/python3 --> /bin/python3.12
+2026-04-13 20:26:31.223 [info] Found: /bin/python3.12 --> /bin/python3.12
+2026-04-13 20:26:31.238 [info] Found: /usr/bin/python --> /usr/bin/python3.12
+2026-04-13 20:26:31.238 [info] Found: /usr/bin/python3 --> /usr/bin/python3.12
+2026-04-13 20:26:31.239 [info] Found: /usr/bin/python3.12 --> /usr/bin/python3.12
+2026-04-13 20:26:31.297 [info] Finished searching for interpreters in posix paths locator: 156 milliseconds
+2026-04-13 20:26:31.297 [info] > /bin/python -I /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/get_output_via_markers.py /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/interpreterInfo.py
+2026-04-13 20:26:31.326 [info] > /usr/bin/python -I /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/get_output_via_markers.py /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/interpreterInfo.py
+2026-04-13 20:26:31.326 [info] Environments refresh paths discovered (event): 194 milliseconds
+2026-04-13 20:26:31.326 [info] Environments refresh paths discovered: 194 milliseconds
+2026-04-13 20:26:31.397 [info] Environments refresh finished (event): 265 milliseconds
+2026-04-13 20:26:31.407 [info] Environment refresh took 275 milliseconds
+2026-04-13 20:26:31.412 [info] Python interpreter path: /bin/python
+2026-04-13 20:26:35.441 [info] Starting Jedi language server for nekofell908.
+2026-04-13 20:26:39.459 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-13 21:11:32.321 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-13 21:11:33.838 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-13 21:11:41.427 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-13 21:13:07.380 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-13 21:13:08.608 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-13 21:15:23.510 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-13 21:19:53.415 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-13 21:24:02.357 [info] Running installed packages checker:  {
+  id: '/bin/python',
+  sysPrefix: '/usr',
+  envType: 'Global',
+  envName: '',
+  envPath: '',
+  path: '/bin/python',
+  architecture: 3,
+  sysVersion: '3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]',
+  version: {
+    raw: '3.12.3',
+    major: 3,
+    minor: 12,
+    patch: 3,
+    build: [],
+    prerelease: [ 'final', '0' ]
+  },
+  displayName: 'Python 3.12.3 64-bit',
+  detailedDisplayName: 'Python 3.12.3 64-bit',
+  type: undefined
+} /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py /home/nekofell908/requirements.txt
+2026-04-13 21:24:02.357 [info] > /bin/python /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/installed_check.py ./requirements.txt
+2026-04-13 21:24:54.123 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-13 21:42:32.823 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-13 21:50:21.306 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-13 21:50:22.040 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-13 22:01:52.206 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-13 22:01:54.673 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-13 22:01:58.774 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-13 22:02:01.959 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py

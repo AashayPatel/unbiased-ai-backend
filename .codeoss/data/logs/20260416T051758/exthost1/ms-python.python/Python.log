@@ -1,0 +1,9 @@
+2026-04-16 05:18:13.122 [warning] Dir "/home/nekofell908/.pixi/envs" is not watchable (directory does not exist)
+2026-04-16 05:18:16.877 [info] Skipping ActivatedEnv Detection:  process.env.VSCODE_CLI !== '1'
+2026-04-16 05:18:17.551 [info] > /bin/python -I /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/get_output_via_markers.py /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/interpreterInfo.py
+2026-04-16 05:18:18.086 [info] Python interpreter path: /bin/python
+2026-04-16 05:18:18.121 [info] > pyenv which python
+2026-04-16 05:18:18.121 [info] cwd: .
+2026-04-16 05:18:21.184 [info] Starting Jedi language server for nekofell908.
+2026-04-16 05:28:13.435 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py
+2026-04-16 05:28:40.235 [info] Discover tests for workspace name: nekofell908 - uri: /home/nekofell908/main.py

@@ -1,5 +1,40 @@
-.env
+# Python
 __pycache__/
 *.pyc
+.env
 .venv/
+
+# Node — both root and frontend
+node_modules/
+unbiased-ai-frontend/node_modules/
+dist/
+build/
+.env.local
+
+# Cloud Shell junk
+README-cloudshell.txt
+
+# OS
+.DS_Store
+
+# npm cache and logs
+.npm/
+.npm/_cacache/
+.npm/_logs/
+.npm/_npx/
+
+# Shell config files
+.profile
+.sudo_as_admin_successful
 .vscode/
+
+# Gemini
+.gemini/
+
+# Extra CSVs (keep only compas_fixed.csv)
+compas-scores-two-years.csv
+
+# Root level package.json (belongs to frontend only)
+package-lock.json
+package.json
+.cache/

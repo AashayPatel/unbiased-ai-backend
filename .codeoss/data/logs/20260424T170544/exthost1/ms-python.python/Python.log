@@ -1,0 +1,39 @@
+2026-04-24 17:05:54.190 [warning] Dir "/home/nekofell908/.pixi/envs" is not watchable (directory does not exist)
+2026-04-24 17:05:56.005 [info] Starting Environment refresh
+2026-04-24 17:05:56.005 [info] Searching for interpreters in posix paths locator
+2026-04-24 17:05:56.014 [info] Searching for pyenv environments
+2026-04-24 17:05:56.014 [info] Searching for conda environments
+2026-04-24 17:05:56.015 [info] Searching for global virtual environments
+2026-04-24 17:05:56.015 [info] Searching for custom virtual environments
+2026-04-24 17:05:58.346 [info] Skipping ActivatedEnv Detection:  process.env.VSCODE_CLI !== '1'
+2026-04-24 17:05:58.346 [info] Skipping ActivatedEnv Detection:  process.env.VSCODE_CLI !== '1'
+2026-04-24 17:05:58.351 [info] pyenv is not installed
+2026-04-24 17:05:58.351 [info] Finished searching for pyenv environments: 2345 milliseconds
+2026-04-24 17:05:58.352 [info] Finished searching for custom virtual envs: 2344 milliseconds
+2026-04-24 17:05:58.368 [info] > conda info --json
+2026-04-24 17:05:58.380 [info] > hatch env show --json
+2026-04-24 17:05:58.380 [info] cwd: .
+2026-04-24 17:05:58.421 [info] > pyenv which python
+2026-04-24 17:05:58.421 [info] cwd: .
+2026-04-24 17:05:58.421 [info] Finished searching for global virtual envs: 2413 milliseconds
+2026-04-24 17:05:58.466 [info] Found: /bin/python --> /bin/python3.12
+2026-04-24 17:05:58.492 [info] Found: /bin/python3 --> /bin/python3.12
+2026-04-24 17:05:58.495 [info] Found: /bin/python3.12 --> /bin/python3.12
+2026-04-24 17:05:58.514 [info] Found: /usr/bin/python --> /usr/bin/python3.12
+2026-04-24 17:05:58.515 [info] Found: /usr/bin/python3 --> /usr/bin/python3.12
+2026-04-24 17:05:58.515 [info] Found: /usr/bin/python3.12 --> /usr/bin/python3.12
+2026-04-24 17:05:58.629 [info] Finished searching for interpreters in posix paths locator: 2620 milliseconds
+2026-04-24 17:05:58.629 [info] > /bin/python -I /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/get_output_via_markers.py /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/interpreterInfo.py
+2026-04-24 17:05:58.643 [info] > /usr/bin/python -I /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/get_output_via_markers.py /google/devshell/editor/code-oss-for-cloud-shell/extensions/ms-python.python/python_files/interpreterInfo.py
+2026-04-24 17:05:58.643 [info] Environments refresh paths discovered (event): 2640 milliseconds
+2026-04-24 17:05:58.643 [info] Environments refresh paths discovered: 2640 milliseconds
+2026-04-24 17:05:58.644 [info] Discover tests for workspace name: undefined - uri: /User/settings.json
+2026-04-24 17:05:59.714 [info] Environments refresh finished (event): 3711 milliseconds
+2026-04-24 17:05:59.737 [info] Environment refresh took 3733 milliseconds
+2026-04-24 17:05:59.741 [info] Python interpreter path: /bin/python
+2026-04-24 17:06:06.098 [info] Discover tests for workspace name: undefined - uri: /User/settings.json
+2026-04-24 17:06:07.262 [info] Starting Jedi language server for nekofell908.
+2026-04-24 17:06:09.003 [info] Discover tests for workspace name: undefined - uri: /User/settings.json
+2026-04-24 17:06:09.355 [info] Discover tests for workspace name: undefined - uri: /User/settings.json
+2026-04-24 17:06:10.305 [info] Discover tests for workspace name: undefined - uri: /User/settings.json
+2026-04-24 17:06:11.245 [info] Discover tests for workspace name: undefined - uri: /User/settings.json

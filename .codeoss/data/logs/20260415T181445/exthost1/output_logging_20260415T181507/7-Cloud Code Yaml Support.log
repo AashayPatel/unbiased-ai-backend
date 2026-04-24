@@ -1,0 +1,3 @@
+[Error - 6:15:36 PM] (node:1985) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[Error - 6:44:11 PM] Failed to load entities from /home/nekofell908/unbiased-ai-frontend/node_modules/.vite/deps_temp_f3ce3ef3/_metadata.json: Error: ENOENT: no such file or directory, open '/home/nekofell908/unbiased-ai-frontend/node_modules/.vite/deps_temp_f3ce3ef3/_metadata.json'
