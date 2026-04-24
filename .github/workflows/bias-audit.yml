@@ -1,0 +1,120 @@
+name: 🔍 Bias Audit Gate
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+env:
+  DIR_THRESHOLD: "0.8"
+  AUDIT_THRESHOLD: "0.5"
+
+jobs:
+  bias-audit:
+    name: Disparate Impact Ratio Check
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Call bias audit API
+        id: audit
+        run: |
+          echo "Calling audit endpoint..."
+          RESPONSE=$(curl --silent --fail --max-time 30 \
+            "${{ secrets.AUDIT_API_URL }}/audit?threshold=${{ env.AUDIT_THRESHOLD }}")
+          if [ $? -ne 0 ]; then
+            echo "::error::❌ Failed to reach audit endpoint."
+            exit 1
+          fi
+          echo "API Response:"
+          echo "$RESPONSE" | python3 -m json.tool
+          DIR=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['disparate_impact_ratio'])")
+          STATUS=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['pass'])")
+          WHITE=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('white_approval_rate','N/A'))")
+          BLACK=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('black_approval_rate','N/A'))")
+          HISPANIC=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('hispanic_approval_rate','N/A'))")
+          ASIAN=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('asian_approval_rate','N/A'))")
+          SAMPLE=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('sample_size','N/A'))")
+          echo "dir=$DIR"           >> $GITHUB_ENV
+          echo "status=$STATUS"     >> $GITHUB_ENV
+          echo "white=$WHITE"       >> $GITHUB_ENV
+          echo "black=$BLACK"       >> $GITHUB_ENV
+          echo "hispanic=$HISPANIC" >> $GITHUB_ENV
+          echo "asian=$ASIAN"       >> $GITHUB_ENV
+          echo "sample=$SAMPLE"     >> $GITHUB_ENV
+
+      - name: Print audit summary
+        run: |
+          echo ""
+          echo "╔══════════════════════════════════════════════════╗"
+          echo "║           UNBIASED AI — BIAS AUDIT REPORT        ║"
+          echo "╠══════════════════════════════════════════════════╣"
+          echo "║  Decision threshold   : ${{ env.AUDIT_THRESHOLD }}"
+          echo "║  Sample size          : ${{ env.sample }}"
+          echo "╠══════════════════════════════════════════════════╣"
+          echo "║  APPROVAL RATES BY RACE                          ║"
+          echo "║  White                : ${{ env.white }}"
+          echo "║  Black                : ${{ env.black }}"
+          echo "║  Hispanic             : ${{ env.hispanic }}"
+          echo "║  Asian                : ${{ env.asian }}"
+          echo "╠══════════════════════════════════════════════════╣"
+          echo "║  Disparate Impact     : ${{ env.dir }}"
+          echo "║  Required (4/5ths)    : >= ${{ env.DIR_THRESHOLD }}"
+          echo "║  Verdict              : ${{ env.status }}"
+          echo "╚══════════════════════════════════════════════════╝"
+
+      - name: Enforce 4/5ths rule
+        run: |
+          python3 -c "
+          dir_score = float('${{ env.dir }}')
+          threshold = float('${{ env.DIR_THRESHOLD }}')
+          print(f'DIR score : {dir_score}')
+          print(f'Required  : >= {threshold}')
+          if dir_score < threshold:
+              print(f'RESULT    : FAIL — bias detected ({dir_score:.4f} < {threshold})')
+              exit(1)
+          else:
+              print(f'RESULT    : PASS — model meets fairness standard')
+              exit(0)
+          "
+
+      - name: Post bias report to PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const dir      = '${{ env.dir }}';
+            const pass     = '${{ env.status }}' === 'True';
+            const white    = '${{ env.white }}';
+            const black    = '${{ env.black }}';
+            const hispanic = '${{ env.hispanic }}';
+            const asian    = '${{ env.asian }}';
+            const sample   = '${{ env.sample }}';
+            const verdict  = pass
+              ? '✅ **PASS** — Model meets the 4/5ths fairness rule'
+              : '❌ **FAIL** — Biased model detected. Merge blocked.';
+            const body = `## 🔍 Bias Audit Report\n\n${verdict}\n\n| Metric | Value |\n|--------|-------|\n| Disparate Impact Ratio | \`${parseFloat(dir).toFixed(4)}\` |\n| Required (4/5ths rule) | \`>= 0.8\` |\n| Sample size | ${sample} |\n\n### Approval rates by race\n| Group | Rate |\n|-------|------|\n| White | ${(parseFloat(white)*100).toFixed(1)}% |\n| Black | ${(parseFloat(black)*100).toFixed(1)}% |\n| Hispanic | ${(parseFloat(hispanic)*100).toFixed(1)}% |\n| Asian | ${(parseFloat(asian)*100).toFixed(1)}% |\n\n${!pass ? '> ⚠️ **Action required:** Run `/mitigate` to fix bias before merging.' : ''}`;
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body
+            });
+
+      - name: Intersectional bias check (informational)
+        continue-on-error: true
+        run: |
+          RESPONSE=$(curl --silent --max-time 30 \
+            "${{ secrets.AUDIT_API_URL }}/audit/intersectional?threshold=${{ env.AUDIT_THRESHOLD }}")
+          echo "$RESPONSE" | python3 -c "
+          import sys, json
+          d = json.load(sys.stdin)
+          print(f'Intersectional DIR : {d.get(\"intersectional_dir\", \"N/A\")}')
+          print(f'Best subgroup      : {d.get(\"best_subgroup\", \"N/A\")}')
+          print(f'Worst subgroup     : {d.get(\"worst_subgroup\", \"N/A\")}')
+          " 2>/dev/null || echo "Intersectional endpoint not available"
